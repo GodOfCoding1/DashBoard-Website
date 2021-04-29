@@ -13,6 +13,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 0.2s;
+}
+
+.side-bar-hidden {
+    left: -266px;
 }
 
 .side-bar::-webkit-scrollbar-track {
@@ -127,6 +132,11 @@ body {
     left: 265px;
     right: 0;
     z-index: 20;
+    transition: 0.2s;
+}
+
+.nav-bar-large {
+    left: 0;
 }
 
 #left {
@@ -229,6 +239,11 @@ body {
     top: 65px;
     bottom: 0;
     right: 0;
+    transition: 0.2s;
+}
+
+.main-body-large {
+    left: 0;
 }
 
 .body-heading {
@@ -383,6 +398,7 @@ body {
 
 .task-card:hover {
     background-color: #e6e6e6;
+    cursor: pointer;
 }
 
 .task-details {
@@ -510,6 +526,11 @@ body {
     color: white !important;
 }
 
+.active-day {
+    font-weight: 700;
+    color: rgb(255, 41, 41);
+}
+
 @media screen and (max-width: 720px) {
     .weekdays li,
     .days li {
@@ -544,3 +565,17 @@ body {
     right: 20px;
     height: 357px;
 }
+
+
+/*
+@media only screen and (max-width: 1180px) {
+    #side-bar {
+        left: -266px;
+    }
+    #nav-bar {
+        left: 0;
+    }
+    #main-body {
+        left: 0;
+    }
+}*/
