@@ -240,6 +240,9 @@ body {
     bottom: 0;
     right: 0;
     transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-body-large {
@@ -265,12 +268,8 @@ body {
 
 .cards {}
 
-.holder-of-holder {}
-
 .holder-card-widgets {
-    position: absolute;
-    left: 20px;
-    right: 20px;
+    width: 96.6%;
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -316,10 +315,8 @@ body {
 }
 
 .card-holder {
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    top: 293px;
+    margin-top: 20px;
+    width: 96.6%;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -384,10 +381,17 @@ body {
     flex-direction: column;
 }
 
+.holder-of-task-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
 .task-card {
-    min-width: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     font-size: 14px;
     height: 60px;
@@ -402,6 +406,7 @@ body {
 }
 
 .task-details {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -412,9 +417,6 @@ body {
 }
 
 .holder-task-details {
-    position: absolute;
-    left: 0px;
-    right: 100px;
     display: flex;
     flex-direction: column;
     color: rgb(124, 124, 124);
@@ -427,6 +429,7 @@ body {
 }
 
 .task-status {
+    margin-right: 60px;
     width: 90px;
 }
 
@@ -436,16 +439,19 @@ body {
     color: rgb(255, 179, 0);
     font-weight: bold;
     padding-left: 10px;
+    margin-right: 60px;
     width: 90px;
     background-color: rgba(255, 196, 35, 0.335);
 }
 
 .task-completed {
+    margin-right: 60px;
     color: rgb(0, 204, 44);
     background-color: rgba(41, 251, 104, 0.26);
 }
 
 .task-outdated {
+    margin-right: 60px;
     padding-left: 12px;
     color: rgb(255, 29, 29);
     background-color: rgba(255, 35, 35, 0.267);
@@ -459,17 +465,21 @@ body {
     width: 170px;
 }
 
-.task-icons {}
+.task-icons {
+    width: 85px;
+}
 
 
 /*calender*/
 
 .calender {
-    position: absolute;
-    top: 67px;
-    left: 20px;
-    right: 20px;
+    width: 96.6%;
+    margin-top: 20px;
     box-sizing: border-box;
+}
+
+.calender-first-block {
+    width: 100%;
 }
 
 .calender ul {
@@ -559,23 +569,60 @@ body {
 /* end of calender*/
 
 .calender-holder {
-    position: absolute;
-    top: 770px;
-    left: 20px;
-    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 96.6%;
     height: 357px;
 }
 
+@media only screen and (max-width: 320px) {
+    /* Styles for portrait in phones*/
+}
 
-/*
-@media only screen and (max-width: 1180px) {
-    #side-bar {
-        left: -266px;
+@media only screen and (max-width: 685px) {
+    .search-input {
+        width: 70px;
     }
-    #nav-bar {
-        left: 0;
+}
+
+@media only screen and (max-width: 565px) {
+    .search-button {
+        display: none;
     }
-    #main-body {
-        left: 0;
+}
+
+@media only screen and (max-width: 490px) {
+    .search-bar {
+        display: none;
     }
-}*/
+}
+
+@media only screen and (max-width: 905px) {
+    .task-card {
+        width: 849px;
+    }
+}
+
+@media only screen and (max-width: 458px) {
+    .holder-card-widgets {
+        display: flex;
+        flex-direction: column;
+    }
+    .card-widgets {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgb(211, 211, 211);
+    }
+    #project-widjet-1 {
+        border-right: none;
+    }
+    #project-widjet-2 {
+        border-right: none;
+    }
+    #project-widjet-3 {
+        border-right: none;
+    }
+}
+
+@media only screen and (max-width: 380px) {}
